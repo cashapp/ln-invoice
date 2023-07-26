@@ -3,7 +3,7 @@
 Parse Bitcoin Lightning Network invoices (payment requests) in Kotlin. This library implements decoding of invoices as per
 [BOLT-11: # Invoice Protocol for Lightning Payments](https://github.com/lightning/bolts/blob/master/11-payment-encoding.md#bolt-11-invoice-protocol-for-lightning-payments)
 
-[<img src="https://img.shields.io/maven-central/v/app.cash.lninvoice/ln-invoice.svg?label=latest%20release"/>](https://central.sonatype.com/namespace/app.cash.quiver)
+[<img src="https://img.shields.io/nexus/r/app.cash.lninvoice/ln-invoice.svg?label=latest%20release&server=https%3A%2F%2Foss.sonatype.org"/>](https://central.sonatype.com/namespace/app.cash.lninvoice)
 
 ## Getting Started
 
