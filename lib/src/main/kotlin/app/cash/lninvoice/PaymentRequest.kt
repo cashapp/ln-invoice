@@ -42,13 +42,23 @@ import java.nio.ByteBuffer
 import java.time.Duration
 import java.time.Instant
 
+/**
+ * A request for payment, as per [BOLT-11](https://github.com/lightning/bolts/blob/master/11-payment-encoding.md#bolt-11-invoice-protocol-for-lightning-payments)
+ */
 data class PaymentRequest(
+  /** In which Bitcoin network this request is valid */
   val network: Network,
+  /** When the request was created */
   val timestamp: Instant,
+  /** The optional amount that this request is asking for */
   val amount: Option<BitcoinAmount> = None,
+  /** Hash of the request pre-image */
   val paymentHash: String,
+  /** List of all the raw tagged fields in the request */
   val taggedFields: List<TaggedField> = emptyList(),
+  /** Signature provided by the requesting node */
   val signature: ByteString,
+  /** Checksum for this request */
   val hash: ByteString
 ) {
 
@@ -202,6 +212,10 @@ data class PaymentRequest(
       return buffer.toByteString().sha256()
     }
 
+    /**
+     * Parse an encoded invoice into a PaymentRequest.
+     * @throws `InvalidInvoice` if it cannot be parsed.
+     */
     fun parseUnsafe(encoded: String): PaymentRequest = parse(encoded).orThrow()
   }
 }

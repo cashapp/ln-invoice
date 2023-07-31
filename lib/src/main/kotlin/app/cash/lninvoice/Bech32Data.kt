@@ -31,6 +31,9 @@ import okio.ByteString.Companion.toByteString
 import java.util.Locale
 import kotlin.streams.toList
 
+/**
+ * Represents bech32 encoded data.
+ */
 data class Bech32Data(
   val encoding: Encoding,
   val hrp: String,
