@@ -7,7 +7,7 @@ Parse Bitcoin Lightning Network invoices (payment requests) in Kotlin. This libr
 
 ## Getting Started
 
-On the [Sontaype page for ln-invoice](https://central.sonatype.com/namespace/app.cash.lninvoice), choose the latest version
+On the [Sonatype page for ln-invoice](https://central.sonatype.com/namespace/app.cash.lninvoice), choose the latest version
 of `ln-invoice` and follow the instructions for inclusion in your build tool.
 
 ### Parsing a payment request
